@@ -1,0 +1,13 @@
+div{
+background:var(--icon-color-favourite);
+color:var(--ion-color-favourite-contrast);
+}
+
+.chat{
+  background-color: lightgreen;
+  text-emphasis-color: white;
+}
+
+ion-tab-button:hover{
+  background-color: lightgreen;
+}

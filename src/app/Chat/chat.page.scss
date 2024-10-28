@@ -1,0 +1,62 @@
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-chip:hover {
+  background-color: lightgreen;
+}
+
+
+ion-fab-button {
+  --border-radius: 15px;
+}
+
+.button {
+  background-color: white;
+}
+
+.chat {
+  position: absolute;
+}
+
+.circle{
+  text-emphasis-color: white;
+}
+
+
+.searchbar {
+  margin-left: 10px; 
+}
+
+.lottie-Container {
+  width: 24px;
+  height: 24px;
+}
+.bar{
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 25px;
+}
