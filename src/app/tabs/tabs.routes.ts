@@ -26,6 +26,7 @@ export const routes: Routes = [
         loadComponent:()=>
           import('../calls/calls.page').then((m)=>m.CallsPage)
       },
+    
       {
         path: '',
         redirectTo: '/tabs/chat',

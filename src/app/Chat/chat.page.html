@@ -4,13 +4,27 @@
     <ion-buttons slot="end">
       <ion-button>
         <ion-icon name="qr-code-outline" slot="icon-only"></ion-icon>
+
+
       </ion-button>
       <ion-button>
         <ion-icon name="camera-Outline" slot="icon-only"></ion-icon>
       </ion-button>
-      <ion-button>
+      <ion-button id="click-trigger">
         <ion-icon name="ellipsis-Vertical-Outline" slot="icon-only">
         </ion-icon>
+        <ion-popover trigger="click-trigger" triggerAction="click">
+          <ng-template>
+            <ion-content>
+              <h6 class="ion-margin-start" [routerLink]="['/new-group']">New Group</h6>
+              <h6 class="ion-margin-start">New Broadcast</h6>
+              <h6 class="ion-margin-start">Linked Devices</h6>
+              <h6 class="ion-margin-start">Starred Message</h6>
+              <h6 class="ion-margin-start">Payments</h6>
+              <h6 class="ion-margin-start" [routerLink]="['/settings']">Settings</h6>
+            </ion-content>
+          </ng-template>
+        </ion-popover>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -25,6 +39,12 @@
     </ion-item>
   </ion-list>
 
+  <ion-chip class="ion-margin-start" color="success">All</ion-chip>
+  <ion-chip class="ion-padding-end">Unread</ion-chip>
+  <ion-chip class="ion-padding-end">Favourites</ion-chip>
+  <ion-chip class="ion-padding-end">Groups</ion-chip>
+  <br>
+
   <ion-list>
     <ion-item lines="none">
       <ion-buttons>
@@ -35,12 +55,6 @@
       </ion-buttons>
     </ion-item>
   </ion-list>
-  <ion-chip class="ion-margin-start" color="success">All</ion-chip>
-  <ion-chip class="ion-padding-end">Unread</ion-chip>
-  <ion-chip class="ion-padding-end">Favourites</ion-chip>
-  <ion-chip class="ion-padding-end">Groups</ion-chip>
-  <br>
-
 
   <ion-list>
     <ion-item lines="none">
@@ -53,9 +67,9 @@
         <h2><b>Babes</b></h2>
         <p>Hey,how are you</p>
       </ion-label>
-      <ion-text slot="end">8.20pm <br>
+      <ion-text>8:20 pm <br>
         <span class="material-symbols-outlined">
-          <ion-badge color="success" slot="start" shape="round">2</ion-badge>
+          <ion-badge mode="ios" color="success">2</ion-badge>
 
           keep
 
@@ -76,10 +90,10 @@
         <h2><b>Mr Happy</b></h2>
         <p>Lets catch up</p>
       </ion-label>
-      <ion-text slot="end">3.00pm <br>
+      <ion-text>3:00 pm <br>
         <span class="material-symbols-outlined">
-          <ion-badge color="success">4</ion-badge>
-            keep
+          <ion-badge color="success" mode="ios">4</ion-badge>
+          keep
         </span>
       </ion-text><br>
     </ion-item>
@@ -94,12 +108,12 @@
         <h2><b>Bala</b></h2>
         <p>Hey...</p>
       </ion-label>
-      <ion-text slot="end">4.20pm <br>
+      <ion-text slot="end">4:20 pm <br>
         <span class="material-symbols-outlined">
-          <ion-badge color="success">4</ion-badge>
-            keep
+          <ion-badge color="success" mode="ios" shape="round">4</ion-badge>
+          keep
         </span>
-     
+
       </ion-text>
     </ion-item>
     <ion-item lines="none">
@@ -150,7 +164,7 @@
       </ion-label>
       <ion-text slot="end">1.40pm
         <br />
-        <ion-badge color="success">4</ion-badge>
+        <ion-badge color="success" mode="ios">4</ion-badge>
       </ion-text>
     </ion-item>
     <ion-item lines="none">
@@ -177,7 +191,7 @@
       </ion-label>
       <ion-text slot="end">6.58pm </ion-text>
     </ion-item>
-    <ion-item lines="none">
+    <ion-item>
       <ion-avatar class="ion-margin-vertical">
         <img
           src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg"
@@ -192,9 +206,19 @@
       </ion-text>
     </ion-item>
   </ion-list>
+  <ion-list>
+
+    <ion-icon name="lock-closed-outline" class="ion-margin-start"></ion-icon>
+    <ion-label class="ion-margin-start">Your personal messages are
+      <ion-text color="success">end-to-end encrypted</ion-text>
+    </ion-label>
+
+  </ion-list>
+
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button color="light" size="small">
-      <img src="https://techcrunch.com/wp-content/uploads/2024/04/meta-ai-logo.jpg" alt="" width="40px" height="30px" />
+      <div #staticContainer class="lottie-container" id="static-frame"></div>
+
     </ion-fab-button>
     <ion-fab-button color="success" size="small">
       <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF">

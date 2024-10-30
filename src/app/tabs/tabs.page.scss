@@ -3,11 +3,14 @@ background:var(--icon-color-favourite);
 color:var(--ion-color-favourite-contrast);
 }
 
-.chat{
+.chat:hover{
   background-color: lightgreen;
   text-emphasis-color: white;
+  border-radius: 25px;
+
 }
 
-ion-tab-button:hover{
+.image{
   background-color: lightgreen;
+  border-radius: 25px;
 }

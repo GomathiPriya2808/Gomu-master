@@ -21,8 +21,7 @@ import {
   IonHeader,
   IonTitle,
   IonToolbar,
-  IonButtons
-} from '@ionic/angular/standalone';
+  IonButtons, IonPopover } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import {
   calculator,
@@ -37,7 +36,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: 'Communities.page.html',
   styleUrls: ['Communities.page.scss'],
   standalone: true,
-  imports: [
+  imports: [IonPopover, 
     IonFooter,
     IonTabs,
     IonTabBar,

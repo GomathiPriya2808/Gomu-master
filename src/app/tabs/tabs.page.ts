@@ -1,5 +1,5 @@
 import { Component, EnvironmentInjector, inject } from '@angular/core';
-import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, IonButton } from '@ionic/angular/standalone';
+import { IonText,IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, IonButton } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { triangle, ellipse, square, discOutline, callOutline } from 'ionicons/icons';
 
@@ -8,12 +8,16 @@ import { triangle, ellipse, square, discOutline, callOutline } from 'ionicons/ic
   templateUrl: 'tabs.page.html',
   styleUrls: ['tabs.page.scss'],
   standalone: true,
-  imports: [IonButton, IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel],
+  imports: [IonText,IonButton, IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel],
 })
 export class TabsPage {
   public environmentInjector = inject(EnvironmentInjector);
+  isLightGreen=false;
 
   constructor() {
     addIcons({discOutline,callOutline,triangle,ellipse,square});
+  }
+  changeColor(){
+    this.isLightGreen=!this.isLightGreen;
   }
 }

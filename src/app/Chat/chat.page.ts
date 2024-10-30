@@ -1,11 +1,12 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+
 import {
   IonHeader,
   IonToolbar,
   IonTitle,
   IonContent, IonBadge } from '@ionic/angular/standalone';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import {
   IonFab,
   IonFabButton,
@@ -28,7 +29,8 @@ import {
   IonSearchbar,
   IonIcon,
   IonText,
-  IonInput
+  IonInput,
+  IonPopover
 } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import {
@@ -44,8 +46,10 @@ import {
   add,
   archiveOutline,
   search, ellipseOutline,
-  ellipse, heart } from 'ionicons/icons';
+  ellipse, heart, lockClosedOutline } from 'ionicons/icons';
 import lottiWeb from'lottie-web';
+import { CommonModule } from '@angular/common';
+import { ProductService } from '../product.service';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'chat.page.html',
@@ -83,17 +87,26 @@ import lottiWeb from'lottie-web';
     IonToolbar,
     IonTitle,
     IonContent,
-    IonInput
-
+    IonInput,
+    IonPopover,
+    CommonModule,
+    
+  
   ],
 })
 export class ChatPage implements AfterViewInit {
+onBarcodeScan(value: String) {
+  console.log('Scanned value:', value);
+}
+
+
+  ScannedData:string|null=null;
+  user:any;
 
   @ViewChild('lottieContainer',{static:true},) lottieContainer!:ElementRef;
-  
-
-  constructor() {
-    addIcons({qrCodeOutline,cameraOutline,ellipsisVerticalOutline,heart,archiveOutline,ellipse,discOutline,callOutline,pinOutline,addOutline,add,peopleCircleOutline,chatboxOutline,});
+  @ViewChild('staticContainer', {static:true}) staticContainer!:ElementRef; 
+  constructor( private route:ActivatedRoute, private productService:ProductService) {
+    addIcons({qrCodeOutline,cameraOutline,ellipsisVerticalOutline,archiveOutline,lockClosedOutline,heart,ellipse,discOutline,callOutline,pinOutline,addOutline,add,peopleCircleOutline,chatboxOutline,});
   }
   ngAfterViewInit() {
     if(this.lottieContainer){
@@ -105,6 +118,18 @@ export class ChatPage implements AfterViewInit {
         path: '/assets/icon/Animation - 1729919198178 (2).json',
       });
     }
+    if(this.staticContainer){
+      const animation=lottiWeb.loadAnimation({
+        container: this.staticContainer.nativeElement,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        path: '/assets/icon/Animation - 1729919198178 (2).json',
+      });
+      animation.goToAndStop(0, true)
+    }
+  
 
   }
+  
 }

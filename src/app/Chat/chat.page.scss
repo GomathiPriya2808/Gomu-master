@@ -15,9 +15,7 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
@@ -42,21 +40,23 @@ ion-fab-button {
   position: absolute;
 }
 
-.circle{
+.circle {
   text-emphasis-color: white;
 }
 
-
-.searchbar {
-  margin-left: 10px; 
-}
 
 .lottie-Container {
   width: 24px;
   height: 24px;
 }
-.bar{
+
+.bar {
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 25px;
+}
+
+.lottie-container {
+  height: 25px;
+  width: 25px;
 }

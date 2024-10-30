@@ -1,0 +1,203 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+
+    <ion-title>Settings</ion-title>
+    <ion-list slot="start" class="ion-margin-start">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368">
+        <path d="m330-444 201 201-51 51-288-288 288-288 51 51-201 201h438v72H330Z" />
+      </svg>
+
+    </ion-list>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+    <ion-item>
+      <ion-avatar class="ion-margin-vertical">
+        <img
+          src="data:image/jpeg;base64,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"
+          alt="" />
+      </ion-avatar>
+      <h6 class="ion-margin-start">Don't Judge a book its cover </h6>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon name="qr-code-outline" slot="icon-only" color="success"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="add-circle-outline" slot="icon-only" color="success"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item lines="none">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368">
+        <path
+          d="M288-384q-40 0-68-28t-28-68q0-40 28-68t68-28q40 0 68 28t28 68q0 40-28 68t-68 28Zm0 144q-100 0-170-70T48-480q0-100 70-170t170-70q65 0 120 32.5t88 87.5h344l120 120-180 168-84-60-72 60-96-72h-20q-24 68-85.5 106T288-240Zm0-72q63 0 111-40.5T454-456h98l70 52 71-59 81 58 82-76-46-47H449q-19-53-62.5-86.5T288-648q-70 0-119 49t-49 119q0 70 49 119t119 49Z" />
+      </svg>
+      <ion-list-header>
+        <ion-label>Account
+          <p>Security notifications, change number</p>
+        </ion-label>
+      </ion-list-header>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item lines="none">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368">
+        <path
+          d="M263.72-96Q234-96 213-117.15T192-168v-384q0-29.7 21.15-50.85Q234.3-624 264-624h24v-96q0-79.68 56.23-135.84 56.22-56.16 136-56.16Q560-912 616-855.84q56 56.16 56 135.84v96h24q29.7 0 50.85 21.15Q768-581.7 768-552v384q0 29.7-21.16 50.85Q725.68-96 695.96-96H263.72Zm.28-72h432v-384H264v384Zm216.21-120Q510-288 531-309.21t21-51Q552-390 530.79-411t-51-21Q450-432 429-410.79t-21 51Q408-330 429.21-309t51 21ZM360-624h240v-96q0-50-35-85t-85-35q-50 0-85 35t-35 85v96Zm-96 456v-384 384Z" />
+      </svg>
+      <ion-list-header>
+        <ion-label>Privacy
+          <p>Block contacts, disappearing messages</p>
+        </ion-label>
+      </ion-list-header>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item lines="none">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368">
+        <path
+          d="M360.11-408Q340-408 326-421.89q-14-13.88-14-34Q312-476 325.89-490q13.88-14 34-14Q380-504 394-490.11q14 13.88 14 34Q408-436 394.11-422q-13.88 14-34 14Zm240 0Q580-408 566-421.89q-14-13.88-14-34Q552-476 565.89-490q13.88-14 34-14Q620-504 634-490.11q14 13.88 14 34Q648-436 634.11-422q-13.88 14-34 14ZM480.46-168q130.46 0 221-91Q792-350 792-479.76q0-23.24-5-52.74-5-29.5-13-51.5-21 5-38 6.5t-40 1.5q-85.96 0-162.48-33.5T397-706q-37 78-93.5 129T170-500q-1 4-1.5 10t-.5 10q0 130 91 221t221.46 91ZM480-96q-79.38 0-149.19-30T208.5-208.5Q156-261 126-330.96t-30-149.5Q96-560 126-630q30-70 82.5-122t122.46-82q69.96-30 149.5-30t149.55 30.24q70 30.24 121.79 82.08 51.78 51.84 81.99 121.92Q864-559.68 864-480q0 79.38-30 149.19T752-208.5Q700-156 629.87-126T480-96Zm-55-691q46 63 117 101t154 38q12 0 21-.5t23-2.47Q691-720 625-756t-144.51-36q-12.49 0-26.47 1.5Q440.05-789 425-787ZM187-585q57-29 95-71.5T342-758q-63 37-100 78t-55 95Zm238-202Zm-83 29Z" />
+      </svg>
+      <ion-list-header>
+        <ion-label>Avatar
+          <p>Create,edit, profile photo</p>
+        </ion-label>
+      </ion-list-header>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item lines="none">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368">
+        <path
+          d="m480-144-50-45q-100-89-165-152.5t-102.5-113Q125-504 110.5-545T96-629q0-89 61-150t150-61q49 0 95 21t78 59q32-38 78-59t95-21q89 0 150 61t61 150q0 43-14 83t-51.5 89q-37.5 49-103 113.5T528-187l-48 43Zm0-97q93-83 153-141.5t95.5-102Q764-528 778-562t14-67q0-59-40-99t-99-40q-35 0-65.5 14.5T535-713l-35 41h-40l-35-41q-22-26-53.5-40.5T307-768q-59 0-99 40t-40 99q0 33 13 65.5t47.5 75.5q34.5 43 95 102T480-241Zm0-264Z" />
+      </svg> <ion-list-header>
+        <ion-label>Favourites
+          <p>Add, reorder, remove</p>
+        </ion-label>
+      </ion-list-header>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item lines="none">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368">
+        <path
+          d="M240-384h336v-72H240v72Zm0-132h480v-72H240v72Zm0-132h480v-72H240v72ZM96-96v-696q0-29.7 21.15-50.85Q138.3-864 168-864h624q29.7 0 50.85 21.15Q864-821.7 864-792v480q0 29.7-21.15 50.85Q821.7-240 792-240H240L96-96Zm114-216h582v-480H168v522l42-42Zm-42 0v-480 480Z" />
+      </svg> <ion-list-header>
+        <ion-label>Chats
+          <p>Theme, wallpapers,chat history</p>
+        </ion-label>
+      </ion-list-header>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item lines="none">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368">
+        <path
+          d="M192-216v-72h48v-240q0-87 53.5-153T432-763v-53q0-20 14-34t34-14q20 0 34 14t14 34v53q85 16 138.5 82T720-528v240h48v72H192Zm288-276Zm-.21 396Q450-96 429-117.15T408-168h144q0 30-21.21 51t-51 21ZM312-288h336v-240q0-70-49-119t-119-49q-70 0-119 49t-49 119v240Z" />
+      </svg> <ion-list-header>
+        <ion-label>Notifications
+          <p>Message, group & call tones</p>
+        </ion-label>
+      </ion-list-header>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item lines="none">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368">
+        <path
+          d="M444-144q-107-14-179.5-94.5T192-430q0-61 23-113.5t63-91.5l51 51q-30 29-47.5 69T264-430q0 81 51.5 140T444-217v73Zm72 0v-73q77-13 128.5-72.5T696-430q0-90-63-153t-153-63h-7l46 46-51 50-132-132 132-132 51 51-45 45h6q120 0 204 84t84 204q0 111-72.5 192T516-144Z" />
+      </svg>
+      <ion-list-header>
+        <ion-label> Storage and Data
+          <p>Network usage, auto-download</p>
+        </ion-label>
+      </ion-list-header>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item lines="none">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368">
+        <path
+          d="M480-96q-79 0-149-30t-122.5-82.5Q156-261 126-331T96-480q0-80 30-149.5t82.5-122Q261-804 331-834t149-30q80 0 149.5 30t122 82.5Q804-699 834-629.5T864-480q0 79-30 149t-82.5 122.5Q699-156 629.5-126T480-96Zm0-75q17-17 34-63.5T540-336H420q9 55 26 101.5t34 63.5Zm-91-10q-14-30-24.5-69T347-336H204q29 57 77 97.5T389-181Zm182 0q60-17 108-57.5t77-97.5H613q-7 47-17.5 86T571-181ZM177-408h161q-2-19-2.5-37.5T335-482q0-18 .5-35.5T338-552H177q-5 19-7 36.5t-2 35.5q0 18 2 35.5t7 36.5Zm234 0h138q2-20 2.5-37.5t.5-34.5q0-17-.5-35t-2.5-37H411q-2 19-2.5 37t-.5 35q0 17 .5 35t2.5 37Zm211 0h161q5-19 7-36.5t2-35.5q0-18-2-36t-7-36H622q2 19 2.5 37.5t.5 36.5q0 18-.5 35.5T622-408Zm-9-216h143q-29-57-77-97.5T571-779q14 30 24.5 69t17.5 86Zm-193 0h120q-9-55-26-101.5T480-789q-17 17-34 63.5T420-624Zm-216 0h143q7-47 17.5-86t24.5-69q-60 17-108 57.5T204-624Z" />
+      </svg>
+      <ion-list-header>
+        <ion-label>App language
+          <p>English(device's language)</p>
+        </ion-label>
+      </ion-list-header>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item lines="none">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368">
+        <path
+          d="M480-240q20 0 34-14t14-34q0-20-14-34t-34-14q-20 0-34 14t-14 34q0 20 14 34t34 14Zm-36-153h73q0-37 6.5-52.5T555-485q35-34 48.5-58t13.5-53q0-55-37.5-89.5T484-720q-51 0-88.5 27T343-620l65 27q9-28 28.5-43.5T482-652q28 0 46 16t18 42q0 23-15.5 41T496-518q-35 32-43.5 52.5T444-393Zm36 297q-79 0-149-30t-122.5-82.5Q156-261 126-331T96-480q0-80 30-149.5t82.5-122Q261-804 331-834t149-30q80 0 149.5 30t122 82.5Q804-699 834-629.5T864-480q0 79-30 149t-82.5 122.5Q699-156 629.5-126T480-96Zm0-72q130 0 221-91t91-221q0-130-91-221t-221-91q-130 0-221 91t-91 221q0 130 91 221t221 91Zm0-312Z" />
+      </svg>
+      <ion-list-header>
+        <ion-label>Help Center
+          <p>Help center, contact us, privacy policy </p>
+        </ion-label>
+      </ion-list-header>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list>
+    <ion-item lines="none">
+      <ion-icon name="people-outline"></ion-icon>
+      <ion-label class="ion-margin-start">Invite a Friend</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item lines="none">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368">
+        <path
+          d="M446-370 327-489l51-51 68 69 136-136 51 51-187 186ZM264-48q-29.7 0-50.85-21.15Q192-90.3 192-120v-720q0-29.7 21.15-50.85Q234.3-912 264-912h432q29.7 0 50.85 21.15Q768-869.7 768-840v720q0 29.7-21.15 50.85Q725.7-48 696-48H264Zm0-120v48h432v-48H264Zm0-72h432v-480H264v480Zm0-552h432v-48H264v48Zm0 0v-48 48Zm0 624v48-48Z" />
+      </svg>
+      <ion-label class="ion-margin-start">App Updates</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <h6 class="ion-margin-start">Also from Meta</h6>
+  <ion-list>
+    <ion-item lines="none">
+      <ion-icon name="logo-instagram"></ion-icon>
+      <ion-label class="ion-margin-start">Open Instagram</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item lines="none">
+      <ion-icon name="logo-facebook"></ion-icon>
+      <ion-label class="ion-margin-start">Open Facebook</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item lines="none">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368">
+        <path
+          d="M547-144q-46 0-77-32t-31-80q0-69 62.5-127.5T649-454q-7-48-26-73t-49-25q-35 0-74.5 33.5T418-420q-44 68-85 100t-83 32q-45 0-72.5-31.5T150-402q0-42 20-90.5T231-599q29-41 43.5-70.5T289-719q0-11-4.5-17.5T272-743q-11 0-29 13.5T195-686l-51-50q44-44 73-62t56-18q37 0 62 27t25 68q0 33-19 75.5T287-555q-32 44-49 81.5T221-406q0 20 9 33t23 13q12 0 23.5-6.5T304-390q11-11 23.5-27.5T354-455q57-85 112-127t109-42q60 0 100 46t46 122h95v72h-92q0 95-53.5 167.5T547-144Zm3-71q37 0 69.5-53T652-381q-53 9-97.5 47.5T510-258q0 18 11.5 30.5T550-215Z" />
+      </svg>
+      <ion-label class="ion-margin-start">Open Threads</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

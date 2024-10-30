@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonChip,
   IonTabButton,
   IonFooter,
   IonTabs,
@@ -22,16 +26,14 @@ import {
   IonCardSubtitle,
   IonCardTitle,
   IonCardContent,
-  IonToolbar, IonCard, IonCardHeader } from '@ionic/angular/standalone';
+  IonToolbar, IonCard, IonCardHeader, IonPopover } from '@ionic/angular/standalone';
 import {
   callOutline,
   discOutline,
   add,
   ellipsisVerticalOutline,
   qrCodeOutline,
-  search,
-  cameraOutline,
-} from 'ionicons/icons';
+  search, cameraOutline, addCircle } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 import { RouterLink } from '@angular/router';
 
@@ -41,7 +43,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: 'Update.page.html',
   styleUrls: ['Update.page.scss'],
   standalone: true,
-  imports: [IonCardHeader, IonCard,
+  imports: [IonPopover, IonCardHeader, IonCard,
     IonTabButton,
     RouterLink,
     IonFooter,
@@ -67,10 +69,15 @@ import { RouterLink } from '@angular/router';
     IonCard,
     IonCardSubtitle,
     IonCardTitle,
-    IonCardContent
+    IonCardContent,
+    IonChip,
+    IonGrid,
+    IonRow,
+    IonCol,
+   
   ],
 })
 export class UpdatePage {
   constructor() {
-      addIcons({qrCodeOutline,search,ellipsisVerticalOutline,cameraOutline,add,discOutline,callOutline});}
+      addIcons({qrCodeOutline,cameraOutline,search,ellipsisVerticalOutline,addCircle,add,discOutline,callOutline});}
 }
