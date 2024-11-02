@@ -1,25 +1,41 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
-    <ion-title>contact</ion-title>
+    <ion-title></ion-title>
+    <ion-list>
+      <ion-item lines="none">
+        <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+    
+        <ion-avatar>
+          <img [src]="contactImage" alt="">
+        </ion-avatar>
+        <ion-label>
+          <h2><b>{{contactName}}</b></h2>
+          <h3>{{contactLastseen}}</h3>
+        </ion-label>
+        <ion-buttons>
+         <ion-button>
+          <ion-icon>
+          <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M216-192q-29 0-50.5-21.5T144-264v-432q0-29.7 21.5-50.85Q187-768 216-768h432q29.7 0 50.85 21.15Q720-725.7 720-696v168l144-144v384L720-432v168q0 29-21.15 50.5T648-192H216Zm0-72h432v-432H216v432Zm0 0v-432 432Z"/></svg>
+        </ion-icon>  
+        </ion-button>
+          <ion-button>
+            <ion-icon>
+            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M763-145q-121-9-229.5-59.5T339-341q-86-86-135.5-194T144-764q-2-21 12.29-36.5Q170.57-816 192-816h136q17 0 29.5 10.5T374-779l24 106q2 13-1.5 25T385-628l-97 98q20 38 46 73t57.97 65.98Q422-361 456-335.5q34 25.5 72 45.5l99-96q8-8 20-11.5t25-1.5l107 23q17 5 27 17.5t10 29.5v136q0 21.43-16 35.71Q784-143 763-145ZM255-600l70-70-17.16-74H218q5 38 14 73.5t23 70.5Zm344 344q35.1 14.24 71.55 22.62Q707-225 744-220v-90l-75-16-70 70ZM255-600Zm344 344Z"/></svg>
+          </ion-icon>
+          </ion-button>
+            <ion-button>
+              <ion-icon name="ellipsis-Vertical-Outline" slot="icon-only">
+              </ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+     </ion-list>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">contact</ion-title>
-      <ion-list>
-        <ion-item *ngFor="let contact of contacts">
-   
-      <ion-avatar>
-      <img [src]="contact.avatar" alt="">
- </ion-avatar>
- <ion-label>
-  <h2>{{ contact.name }}</h2>
-  <p>{{ contact.subtitle }}</p>
-</ion-label>
-</ion-item>
-</ion-list>
-</ion-toolbar>
-  </ion-header>
+ 
+ 
+  
+
 </ion-content>

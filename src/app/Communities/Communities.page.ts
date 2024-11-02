@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import{NavController} from'@ionic/angular';
 import {
   IonTabs,
   IonTabBar,
@@ -29,7 +30,7 @@ import {
   person,
   discOutline,
   callOutline, qrCodeOutline, cameraOutline, ellipsisVerticalOutline } from 'ionicons/icons';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-tab3',
@@ -64,7 +65,12 @@ import { RouterLink } from '@angular/router';
   ],
 })
 export class CommunitiesPage {
-  constructor() {
+  constructor(private navCtrl:NavController, private router:Router) {
     addIcons({qrCodeOutline,cameraOutline,ellipsisVerticalOutline,discOutline,callOutline,person,pencil,calculator});
+  }
+  startCommunity(){
+    console.log('Community started');
+    this.navCtrl.navigateForward('/Community');
+    this.router.navigate(['/Community']);
   }
 }

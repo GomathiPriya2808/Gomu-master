@@ -20,7 +20,7 @@ export const routes: Routes = [
     loadComponent: () => import('./product/product.page').then( m => m.ProductPage)
   },
   {
-    path: 'contact',
+    path: 'contact/:name/:avatar',
     loadComponent: () => import('./contact/contact.page').then( m => m.ContactPage)
   },
 
