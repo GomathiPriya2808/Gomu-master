@@ -14,13 +14,14 @@ export const routes: Routes = [
     path: 'new-group',
     loadComponent: () => import('./new-group/new-group.page').then( m => m.NewGroupPage)
   },
-  {
-    path: 'babes',
-    loadComponent: () => import('./babes/babes.page').then( m => m.BabesPage)
-  },
+ 
   {
     path: 'product',
     loadComponent: () => import('./product/product.page').then( m => m.ProductPage)
+  },
+  {
+    path: 'contact',
+    loadComponent: () => import('./contact/contact.page').then( m => m.ContactPage)
   },
 
 ];

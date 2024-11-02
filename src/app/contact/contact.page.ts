@@ -1,14 +1,24 @@
-import { Injectable } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonAvatar, IonLabel, IonItem, IonList } from '@ionic/angular/standalone';
 
-@Injectable({
-  providedIn: 'root'
+@Component({
+  selector: 'app-contact',
+  templateUrl: './contact.page.html',
+  styleUrls: ['./contact.page.scss'],
+  standalone: true,
+  imports: [IonList, IonItem, IonLabel, IonAvatar, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-export class ProductService {
-  getProducts() {
-    throw new Error('Method not implemented.');
-  }
+export class ContactPage implements OnInit {
 
   constructor() { }
+
+  ngOnInit() {
+  }
+
+
+    
   contacts = [
     {
 
@@ -45,7 +55,7 @@ export class ProductService {
       avatar: "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
     },
     {
-      name: 'Paapu',
+      name: 'Priya',
       subtitle: "Fly in the sky dude",
       avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRXxfn1j1vKFy8yJeBGl2AS6Dcah-lKgHofg&s",
     },
@@ -72,5 +82,4 @@ export class ProductService {
     },
 
   ]
-
 }
